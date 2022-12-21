@@ -13,13 +13,28 @@
 
     <main>
       <section class="text-insertion">
-        <div class="text-area"></div>
-        <div class="action-bottons"></div>
+        <div class="text-area">
+          <textarea
+            class="text-input"
+            placeholder="Digite seu texto"
+            spellcheck="false"
+          ></textarea>
+        </div>
+        <div class="action-bottons">
+          <button id="code-button" class="buttons">Codificar</button>
+          <button id="decode-button" class="buttons">Decodificar</button>
+        </div>
       </section>
 
       <section class="text-output">
-        <div class="text-output"></div>
-        <div class="copy-button"></div>
+        <div class="text-output">
+          <img src="img/imagem-sem-texto.svg" />
+
+          <h1>Nenhuma mensagem encontrada</h1>
+          <p>
+            Digite um texto que você queria criptografar ou descriptografar.
+          </p>
+        </div>
       </section>
     </main>
 
