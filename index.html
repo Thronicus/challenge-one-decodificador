@@ -3,45 +3,58 @@
 <html lang="pt-BR">
   <head>
     <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
     <title>Decodificador de texto - Um desafio ALURA ORACLE ONE</title>
+
+    <link rel="stylesheet" href="styles/reset.css" />
+    <link rel="stylesheet" href="styles/style.css" />
   </head>
 
   <body>
-    <header></header>
+    <header>
+      <div class="header">
+        <img class="logo" src="imagens/logo.svg" />
+      </div>
+    </header>
 
     <main>
-      <section class="text-insertion">
-        <div class="text-area">
+      <section class="message-input">
+        <div class="input-container">
           <textarea
             class="text-input"
             placeholder="Digite seu texto"
             spellcheck="false"
+            maxlength="500"
+            autofocus
           ></textarea>
-          <div class="aviso-texto">
-            <img src="img/Exclamation-circle-fill.svg" />
-            "Apenas letras minúsculas e sem acento."
+
+          <div class="text-alert">
+            <i class="bi bi-exclamation-circle-fill"></i>
+            <p>Apenas letras minúsculas e sem acento.</p>
           </div>
         </div>
-        <div class="action-bottons">
+
+        <div class="action-buttons">
           <button id="code-button" class="buttons">Codificar</button>
           <button id="decode-button" class="buttons">Decodificar</button>
         </div>
       </section>
 
-      <section class="text-output">
-        <div class="text-output">
-          <img src="img/No-message.svg" />
+      <section class="message-output">
+        <div class="output-container">
+          <img class="image-output" src="imagens/no-message.svg" />
 
-          <h1>Nenhuma mensagem encontrada</h1>
-          <p>
+          <p class="not-found-message">Nenhuma mensagem encontrada.</p>
+          <p class="output-description-message">
             Digite um texto que você queria criptografar ou descriptografar.
           </p>
         </div>
+        <div class="copy-container">
+          <button id="copy-button" class="buttons">Copiar</button>
+        </div>
       </section>
     </main>
-
-    <footer></footer>
   </body>
 </html>
