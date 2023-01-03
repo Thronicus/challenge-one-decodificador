@@ -1,0 +1,334 @@
+/*
+  Imports
+*/
+
+/*Bootstrp Icons*/
+@import url("https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.3/font/bootstrap-icons.css");
+/*Poppins*/
+@import url("https://fonts.googleapis.com/css2?family=Poppins&display=swap");
+
+/*
+  Regra Universal
+*/
+* {
+  box-sizing: border-box;
+}
+
+/*
+  - Layout Externo
+*/
+
+html,
+body {
+  width: 100%;
+  height: 100%;
+  max-width: 100vw;
+}
+
+body {
+  background: #f3f5fc;
+  display: flex;
+  flex-direction: row;
+  font-family: "Poppins", serif;
+  user-select: none;
+}
+
+/*
+  -- Divisória do cabeçalho
+*/
+
+header {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100px;
+  height: 100%;
+  padding: 40px;
+}
+
+/*
+  -- Divisória Principal
+*/
+
+main {
+  display: flex;
+  flex-direction: row;
+  gap: 40px;
+  padding: 40px;
+  width: 100%;
+  height: 100%;
+}
+
+/*
+  --- Divisória de entrada de mensagem
+*/
+.message-input {
+  display: flex;
+  flex-direction: column;
+  padding: 32px;
+  width: 100%;
+  height: 100%;
+}
+
+.input-container {
+  height: 100%;
+}
+
+.text-input {
+  display: block;
+  padding-top: 40px;
+  width: 100%;
+  height: calc(100% - 39px);
+  font-family: inherit;
+  font-size: 24px;
+  font-weight: 400;
+  background: rgba(0, 0, 0, 0);
+  color: #0a3871;
+  border: none;
+  outline: none;
+  resize: none;
+  overflow: hidden;
+}
+
+.text-input::placeholder {
+  color: #0a3871;
+}
+
+.text-alert {
+  padding: 12px 0;
+  font-size: 14px;
+  color: #495057;
+}
+
+.text-alert p {
+  display: inline;
+}
+
+.action-buttons {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  gap: 24px;
+}
+
+.buttons {
+  border: 1px solid #0a3871;
+  border-radius: 20px;
+  width: 250px;
+  height: 45px;
+  font-family: inherit;
+  font-size: 14px;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+#code-button {
+  background: #0a3871;
+  color: #ffffff;
+}
+
+#decode-button {
+  background: #d8dfe8;
+  color: #0a3871;
+}
+
+/*
+  --- Divisória de saida de mensagem
+*/
+
+.message-output {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 18px;
+  padding: 32px;
+  background: #ffffff;
+  border-radius: 32px;
+  box-shadow: 0px 24px 32px -8px rgba(0, 0, 0, 0.08);
+}
+
+.output-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 18px;
+  height: 100%;
+}
+
+.image-output {
+  width: 100%;
+}
+
+.not-found-message,
+.output-description-message {
+  text-align: center;
+  line-height: 150%;
+}
+
+.not-found-message {
+  font-size: 16px;
+  font-weight: bold;
+}
+
+.output-description-message {
+  font-size: 14px;
+  font-weight: 500;
+}
+
+.copy-container {
+  display: flex;
+  justify-content: center;
+}
+
+#copy-button {
+  width: 100%;
+}
+
+/*-----Regras-----*/
+
+/*Tablet*/
+
+@media screen and (max-width: 834px) and (orientation: portrait) {
+  body {
+    flex-direction: column;
+  }
+
+  header {
+    flex-direction: row;
+    width: 100%;
+    height: 100px;
+  }
+
+  main {
+    flex-direction: column;
+  }
+
+  .message-input {
+    padding: 0;
+  }
+
+  #code-button,
+  #decode-button {
+    width: calc(100% - 50%);
+  }
+
+  .image-output {
+    display: none;
+  }
+}
+
+/*Mobile 1*/
+
+@media screen and (max-height: 430px) and (orientation: landscape) {
+  main {
+    padding: 16px;
+  }
+
+  .message-input {
+    padding: 0 32px 0 0;
+    padding: 0;
+  }
+
+  .text-input {
+    height: calc(100% - 37px);
+    font-size: 18px;
+  }
+
+  .text-alert {
+    font-size: 12px;
+  }
+
+  .action-buttons {
+    flex-direction: column;
+    align-items: center;
+    gap: 8px;
+  }
+
+  .image-output {
+    display: none;
+  }
+}
+
+@media screen and (max-width: 430px) and (orientation: portrait) {
+  header {
+    padding: 24px 16px;
+  }
+
+  main {
+    padding: 16px;
+  }
+
+  .text-input {
+    height: calc(100% - 37px);
+    font-size: 18px;
+  }
+
+  .text-alert {
+    font-size: 12px;
+  }
+
+  .action-buttons {
+    flex-direction: column;
+    gap: 16px;
+  }
+
+  #code-button,
+  #decode-button {
+    width: 100%;
+  }
+
+  .message-output {
+    margin: 24px 8px;
+  }
+}
+
+/*Mobile 2*/
+@media screen and (max-height: 360px) and (orientation: landscape) {
+  main {
+    padding: 12px;
+    gap: 12px;
+  }
+
+  .text-input {
+    font-size: 14px;
+  }
+
+  .text-alert {
+    font-size: 10px;
+  }
+
+  .buttons {
+    height: 35px;
+  }
+}
+
+@media screen and (max-width: 360px) and (orientation: portrait) {
+  header {
+    padding: 18px 16px;
+  }
+
+  main {
+    padding: 12px;
+    gap: 12px;
+  }
+
+  .text-input {
+    font-size: 14px;
+  }
+
+  .text-alert {
+    font-size: 10px;
+  }
+
+  .buttons {
+    height: 35px;
+  }
+
+  .action-buttons {
+    gap: 8px;
+  }
+
+  .message-output {
+    margin: 0 8px;
+  }
+}
