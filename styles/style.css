@@ -87,7 +87,7 @@ main {
   border: none;
   outline: none;
   resize: none;
-  overflow: hidden;
+  overflow: scroll;
 }
 
 .text-input::placeholder {
@@ -152,7 +152,13 @@ main {
   flex-direction: column;
   justify-content: center;
   gap: 18px;
+  width: 290px;
   height: 100%;
+  overflow: scroll;
+}
+
+.result {
+  color: #495057;
 }
 
 .image-output {
@@ -184,6 +190,22 @@ main {
   width: 100%;
 }
 
+.hidden {
+  /*visibility: hidden;*/
+  display: none;
+}
+
+/* Hide scrollbar for Chrome, Safari and Opera */
+.scrollbar-hide::-webkit-scrollbar {
+  display: none;
+}
+
+/* Hide scrollbar for IE, Edge and Firefox */
+.scrollbar-hide {
+  -ms-overflow-style: none; /* IE and Edge */
+  scrollbar-width: none; /* Firefox */
+}
+
 /*-----Regras-----*/
 
 /*Tablet*/
@@ -210,6 +232,10 @@ main {
   #code-button,
   #decode-button {
     width: calc(100% - 50%);
+  }
+
+  .output-container {
+    width: 100%;
   }
 
   .image-output {
@@ -259,7 +285,8 @@ main {
   }
 
   .text-input {
-    height: calc(100% - 37px);
+    /*height: calc(100% - 37px);*/
+    height: 300px;
     font-size: 18px;
   }
 
@@ -290,15 +317,19 @@ main {
   }
 
   .text-input {
-    font-size: 14px;
+    font-size: 16px;
   }
 
   .text-alert {
-    font-size: 10px;
+    font-size: 12px;
   }
 
   .buttons {
     height: 35px;
+  }
+
+  .output-container {
+    font-size: 14px;
   }
 }
 
@@ -313,11 +344,11 @@ main {
   }
 
   .text-input {
-    font-size: 14px;
+    font-size: 16px;
   }
 
   .text-alert {
-    font-size: 10px;
+    font-size: 14px;
   }
 
   .buttons {
@@ -326,6 +357,10 @@ main {
 
   .action-buttons {
     gap: 8px;
+  }
+
+  .output-container {
+    font-size: 14px;
   }
 
   .message-output {
