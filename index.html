@@ -23,7 +23,8 @@
       <section class="message-input">
         <div class="input-container">
           <textarea
-            class="text-input"
+            id="input-area"
+            class="text-input scrollbar-hide"
             placeholder="Digite seu texto"
             spellcheck="false"
             maxlength="500"
@@ -43,7 +44,7 @@
       </section>
 
       <section class="message-output">
-        <div class="output-container">
+        <div id="output-area" class="output-container scrollbar-hide">
           <img class="image-output" src="imagens/no-message.svg" />
 
           <p class="not-found-message">Nenhuma mensagem encontrada.</p>
@@ -51,10 +52,12 @@
             Digite um texto que você queria criptografar ou descriptografar.
           </p>
         </div>
-        <div class="copy-container">
-          <button id="copy-button" class="buttons">Copiar</button>
+        <div id="copy-area" class="copy-container">
+          <button id="copy-button" class="buttons hidden">Copiar</button>
         </div>
       </section>
     </main>
+
+    <script src="scripts/scripts.js"></script>
   </body>
 </html>
