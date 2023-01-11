@@ -122,6 +122,17 @@ main {
   cursor: pointer;
 }
 
+.buttons:hover {
+  box-shadow: 0px 5px 10px -5px #32383d;
+  transform: scale(1.015);
+  transition: 250ms;
+}
+.buttons:active {
+  box-shadow: 0px 2px 5px #32383d;
+  transform: scale(0.98);
+  transition: 100ms;
+}
+
 #code-button {
   background: #0a3871;
   color: #ffffff;
@@ -159,6 +170,7 @@ main {
 
 .result {
   color: #495057;
+  justify-content: flex-start;
 }
 
 .image-output {
@@ -188,6 +200,8 @@ main {
 
 #copy-button {
   width: 100%;
+  background: #ffffff;
+  color: #0a3871;
 }
 
 .hidden {
